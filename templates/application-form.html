@@ -1,0 +1,89 @@
+<!doctype html>
+{% extends "base.html" %}
+
+<html>
+<head>
+
+  <!-- header info inherited from base.html template -->
+  
+  {% block title %}Application{% endblock %}
+
+  {% block head %} {{ super() }} {% endblock %}
+
+</head>
+<body>
+
+{% block content %}
+  <div class="container">
+
+    <!-- Page for applying for a job at RobynCorp -->
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Apply to work for RobynCorp!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Innovating in Balloonicorn Poems since 2017</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-8">
+      <h4>Fill out the form below with your name, salary requirements, and
+        career path to apply for your dream job at RobynCorp.  Change the world
+        one Balloonicorn poem at a time.</h4><br>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+
+  </div>
+
+    <!-- form gets user input first and last name, salary req, and job selection -->
+    <!-- posts user input to /application-success route upon submission -->
+
+  <div class="container"> 
+    <form action="/application-success" method="post">
+      <div class="row">
+        <div class="col-xs-4"> 
+          First name: 
+          <input type="text" class="yellow" name="firstname"><br>
+        </div>
+
+        <div class="col-xs-4">  
+          Last name: 
+          <input type="text" class="yellow" id="lastname" name="lastname"><br>
+        </div>
+
+        <div class="col-xs-4">  
+          Salary Requirement in dollars: 
+          <input type="number" class="yellow" name="salary" min="1"><br><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-7">
+          Which job would you like to apply to?<br>
+          
+            <select name="job">
+              <option value="software-engineer">Software Engineer</option>
+              <option value="qa-engineer">QA Engineer</option>
+              <option value="product-manager">Product Manager
+              </option>
+            </select><br><br>
+
+        </div>
+        <div class="col-xs-4"></div>
+      </div>
+
+        <input type="submit" class="yellow">
+      
+
+    </form><br>
+  </div>
+
+{% endblock %}
+
+</body>
+</html>

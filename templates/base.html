@@ -1,0 +1,23 @@
+<!doctype html>
+
+<!-- base flask template applies bootstrap and css styling to all child 
+  templates as well as RobynCorp header and copyright footer -->
+
+<html>
+<head>
+  <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+
+  {% block head %}
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  {% endblock %}
+
+</head>
+<body>
+  <h1>RobynCorp</h1>
+
+  {% block content %}BODY CONTENT GOES HERE{% endblock %}
+
+  <footer>Copyright 2017 RobynCorp</footer>
+
+</body>

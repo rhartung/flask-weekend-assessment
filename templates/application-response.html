@@ -1,0 +1,49 @@
+<!doctype html>
+{% extends "base.html" %}
+
+<html>
+<head>
+
+<!-- header info inherited from base.html template -->
+
+  {% block title %}Success!{% endblock %}
+
+  {% block head %}{{ super() }}{% endblock %}
+</head>
+<body>
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <h1>We've received your application!</h1><br>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+      <img src="https://s-media-cache-ak0.pinimg.com/originals/32/d7/84/32d7841cb1cbd17c276d0282af56cee6.jpg"
+      class="center-block" height=300px width=300px>
+    </div>
+    <div class="col-xs-4"></div>
+  </div><br>
+  <div class="row">
+    <div class="col-xs-1"></div>
+  <div class="row">
+    <div class="col-xs-10">
+
+      <!-- firstname, lastname, job, and salary jinja variables received from application-form.html -->
+
+      <p>Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ job }} at RobynCorp.  We will review your application to see if your experience in the Balloonicorn Poem industry qualifies you to receive your requested salary of {{ "${:,.2f}".format(salary) }}.</p>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-1"></div>
+
+{% endblock %}
+
+</body>
+</html>

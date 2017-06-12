@@ -1,0 +1,61 @@
+<!doctype html>
+{% extends "base.html" %}
+<html>
+<head>
+
+  <!-- header info inherited from base.html template -->
+
+  {% block title %}RobynCorp{% endblock %}
+
+  {% block head %}{{ super() }}{% endblock %}
+
+
+</head>
+<body>
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+<!--     <div class="col-xs-12">
+      <h1>RobynCorp</h1>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Balloonicorn Poems. Pure, Unadulterated, Original.
+      </h2><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+      <img class="center-block" src="https://theawesomer.com/photos/2012/06/290612_team_fortress_2_balloonicorn_1.jpg" height=234px width=250px>
+    </div>
+    <div class="col-xs-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6">
+      <h4>A Haiku About Balloonicorn and the Joy of HTML</h4>
+      <br>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" style="background-color; lavender">
+      <p>Balloonicorn says,<br>
+        Div div div div div div div,<br>
+        Div div div div div.<br>
+      </p>
+    </div>
+  </div>
+  <form action="/application-form" method="get">
+    <input type="submit" class="btn btn-info" value="Join the RC team">
+  </form><br>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
